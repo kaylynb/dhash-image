@@ -14,12 +14,12 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "sharp": "0"
+    "sharp": "^0.20.5"
   },
   "devDependencies": {
-    "istanbul": "0",
-    "mocha": "2",
-    "should": "8"
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "should": "^13.2.1"
   },
   "scripts": {
     "test": "mocha --reporter spec",

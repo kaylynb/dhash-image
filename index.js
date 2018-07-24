@@ -16,6 +16,7 @@ module.exports = function(path, callback, hashSize) {
 	var promise = sharp(path)
 		.grayscale()
 		.resize(width, height)
+		.ignoreAspectRatio()
 		.raw()
 		.toBuffer()
 		.then(function(pixels) {
@@ -49,7 +50,7 @@ function binaryToHex(s) {
 		var hex = decimal.toString(16);
 		output += hex;
 	}
-	return new Buffer(output, 'hex');
+	return Buffer.from(output, 'hex');
 }
 
 function px(pixels, width, x, y) {
